@@ -8,7 +8,7 @@ var display    	= document.querySelector("#quote");
 
 
 xhrbtn.addEventListener("click", function(){
-	var XHR = new XMLHttpRequest();
+	var XHR = new XMLHttpRequest()
 	XHR.onreadystatechange = function(){
 		if(XHR.readyState == 4 && XHR.status == 200){ //4 is when the the request is done
 			var quote = JSON.parse(XHR.responseText)[0];
@@ -33,7 +33,7 @@ fetchbtn.addEventListener("click", function(){
 
 $("#jquery").click(function(){
 	$.getJSON(url)
-	.done(function(data){
+	.done(function(data){ //.done is the jquery way
 		$("#quote").text(data[0]);
 	});
 });
