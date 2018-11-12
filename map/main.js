@@ -18,7 +18,6 @@ function map(arr ,callback) {
     }
     console.log(newArr);
 }
-console.log(map([5,6,7]));
 
 function tripleValues(arr){
     return arr.map(function(value){
@@ -26,3 +25,11 @@ function tripleValues(arr){
     })
 }
 tripleValues([3,4,6]);
+
+
+function firstName(arr){
+    return arr.map(function(value){
+        console.log(value.first);
+    });
+}
+firstName([{first: "Chuy", last: "Medina"}, {first: "John", last: "Doe"}]);
