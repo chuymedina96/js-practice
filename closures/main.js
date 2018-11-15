@@ -3,6 +3,15 @@
 PRVIATE VARIABLES
     - IN other languages, there exists support for variables that cannot be modifed externally, 
         in javascript, we dont have built in. Closure help!
+CLOSURE 
+    - exists when an inner function makes use of variables declared in an outer function which has previously returned.
+    - does not exist if you do not return an inner function and if that inner function does not make use of 
+      variables returned by an outer function.
+    - Javascript will only remember values that are being used inside of the inner function, 
+        not all variables defined in the outer function
+    - We can use closures to create private variables and write better code that isolates our 
+        logic and application.
+
 */
 function outerFn(){
     var data="something from the outerFn";
@@ -28,13 +37,14 @@ function counter(){
 counter1 = counter();
 counter1();
 
+//uses a design pattern called Module design
 function classRoom(){
     var instructors = ["Lali", "Chuy"];
     return {
-        getInstructors: function(){
+        getInstructors: function(){  // module design
             return instructors.slice();
         }, 
-        addInstructors: function(instructor){
+        addInstructors: function(instructor){ //module design
             instructors.push(instructor);
             return instructors.slice();
         }
