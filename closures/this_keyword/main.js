@@ -68,7 +68,7 @@ function variablesInThis(){
  }
 
 //Nested Objects
-// What happends when we have a nested object
+// What happens when we have a nested object
 // Need a way of exlpicitly changed the value of this in the second object. Call, apply, bind can do this.
 var person={
     firstName: "chuy",
